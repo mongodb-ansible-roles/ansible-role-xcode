@@ -1,6 +1,7 @@
 ---
 # Item refers to xcode_versions passed in from main.yml
 - name: Check if Xcode is already downloaded
+  become: true
   stat:
     path: "{{ xcode_download_location }}/xcode{{ item.major }}.xip"
   register: xcode_xip
@@ -13,11 +14,13 @@
   when: not xcode_xip.stat.exists
 
 - name: Check if Xcode directory already exists
+  become: true
   stat:
     path: /Applications/Xcode.app
   register: xcode_dir
 
 - name: Check if Xcode versioned directory already exists
+  become: true
   stat:
     path: /Applications/Xcode{{ item.major }}.app
   register: xcode_ver_dir
