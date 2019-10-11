@@ -1,21 +1,21 @@
 Ansible role for xcode
 ==================================
 
-Installs xcode on Mac hosts\
+Installs xcode on Mac hosts
 
 [![CircleCI](https://img.shields.io/circleci/build/github/mongodb-ansible-roles/ansible-role-xcode/master?style=flat-square)](https://circleci.com/gh/mongodb-ansible-roles/ansible-role-xcode)
 
 Requirements
 ------------
 
-None
+Command line tools must be installed. This is taken care of by the elliotweiser.osx-command-line-tools role
 
 Role Variables
 --------------
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-------:|:--------:|
-| name | desc | type | default | required |
+| xcode\_versions | List of xcode versions with minor versions to install | List of objects | See example | true |
 
 Dependencies
 ------------
@@ -30,6 +30,10 @@ Example Playbook
   roles:
     - role: ansible-role-xcode
       vars:
+        xcode_versions:
+          - major: 10.2
+            minor: 0
+            gm_licence: EA1478
 ```
 
 Development
