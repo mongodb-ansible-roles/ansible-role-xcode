@@ -1,0 +1,63 @@
+---
+# Item refers to xcode_versions passed in from main.yml
+- name: Check if Xcode is already downloaded
+  stat:
+    path: "{{ xcode_download_location }}/xcode{{ item.major }}.xip"
+  register: xcode_xip
+  
+- name: Download Xcode
+  become: true
+  get_url:
+    url: https://s3.amazonaws.com/boxes.10gen.com/build/xcode/Xcode_{{ item.major }}.{{ item.minor }}.xip
+    dest: "{{ xcode_download_location }}/xcode{{ item.version }}.xip"
+  when: not xcode_xip.stat.exists
+
+- name: Check if Xcode directory already exists
+  stat:
+    path: /Applications/Xcode.app
+  register: xcode_dir
+
+- name: Check if Xcode versioned directory already exists
+  stat:
+    path: /Applications/Xcode{{ item.major }}.app
+  register: xcode_ver_dir
+
+- name: Move xcode to correct directory
+  become: true
+  command: mv /Applications/Xcode.app /Applications/Xcode{{ item.major }}.{{ item.minor }}.app
+  when: 
+    - xcode_dir.stat.exists
+    - not xcode_ver_dir.stat.exists
+
+- name: Link Xcode version
+  become: true
+  file:
+    src: /Applications/Xcode{{ item.major }}.{{ item.minor }}.app
+    dest: /Applications/Xcode{{ item.major }}.app
+    state: link
+    owner: root
+    group: wheel
+
+- name: Accept xcode license
+  become: true
+  template:
+    src: com.apple.dt.Xcode.plist.erb
+    dest: /Library/Preferences/com.apple.dt.Xcode.plist
+    owner: root
+    group: wheel
+    mode: 0644
+
+# BUILD-7003
+- name: OSX | Run xcode first launch
+  become: true
+  command: /Applications/Xcode{{ item.major }}.app/Contents/Developer/usr/bin/xcodebuild -runFirstLaunch
+  args:
+    creates: /etc/XCode{{ item.major }}FirstLaunch
+  register: first_launch
+
+- name: Create xcode first launch file
+  become: true
+  file:
+    path: /etc/XCode{{ item.major }}FirstLaunch
+    state: touch
+  when: first_launch.changed
