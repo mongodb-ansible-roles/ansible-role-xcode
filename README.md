@@ -8,7 +8,7 @@ Installs xcode on Mac hosts
 Requirements
 ------------
 
-Command line tools must be installed. This is taken care of by the elliotweiser.osx-command-line-tools role
+Command line tools must be installed. This is taken care of by the command-line-tools role
 
 Role Variables
 --------------
