@@ -1,14 +1,14 @@
 ---
 dependencies:
-  - role: elliotweiser.osx-command-line-tools
+  - role: ansible-role-command-line-tools
 galaxy_info:
   author: MongoDB
-  description: Installs xcode on Mac hosts\
+  description: Installs xcode on Mac hosts
   license: Apache
   min_ansible_version: 2.8
   platforms:
-    - name: debian
+    - name: MacOSX
       versions:
-        - buster
+        - "10.14"
   galaxy_tags:
     - xcode
