@@ -1,2 +1,3 @@
 ---
-[]
+- name: ansible-role-command-line-tools
+  src: git+https://github.com/mongodb-ansible-roles/ansible-role-command-line-tools.git
