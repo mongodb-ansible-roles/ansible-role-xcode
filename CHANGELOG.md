@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.1.0...v1.1.1) (2019-11-01)
+
+
+### Bug Fixes
+
+* xcode downloading logic and extracting logic ([11d5d51](https://github.com/mongodb-ansible-roles/ansible-role-xcode/commit/11d5d51093a1318e61a519a32fd1df7df2f212c8))
+
 # [1.1.0](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.0.0...v1.1.0) (2019-11-01)
 
 
