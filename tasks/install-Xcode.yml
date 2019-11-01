@@ -10,7 +10,7 @@
   become: true
   get_url:
     url: https://s3.amazonaws.com/boxes.10gen.com/build/xcode/Xcode_{{ item.major }}.{{ item.minor }}.xip
-    dest: "{{ xcode_download_location }}/xcode{{ item.version }}.xip"
+    dest: "{{ xcode_download_location }}/xcode{{ item.major }}.xip"
   when: not xcode_xip.stat.exists
 
 - name: Check if Xcode directory already exists
