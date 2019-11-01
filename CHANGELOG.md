@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.1.1...v1.1.2) (2019-11-01)
+
+
+### Bug Fixes
+
+* Actually unxip the xcode xip file ([6902c0e](https://github.com/mongodb-ansible-roles/ansible-role-xcode/commit/6902c0e7266dc982edcb03cd91fc60ecfa189a90))
+
 ## [1.1.1](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.1.0...v1.1.1) (2019-11-01)
 
 
