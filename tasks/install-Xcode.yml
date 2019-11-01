@@ -1,6 +1,6 @@
 ---
 # Item refers to xcode_versions passed in from main.yml
-- name: Check if Xcode is already downloaded
+- name: Check if Xcode {{ item.major }} is already downloaded
   become: true
   stat:
     path: "/Applications/Xcode_{{ item.major }}.{{ item.minor }}.xip"
@@ -13,10 +13,15 @@
     dest: "/Applications/Xcode_{{ item.major }}.{{ item.minor }}.xip"
   when: not xcode_xip.stat.exists
 
-- name: Unxip xcode
+# This takes up to 6 minutes
+- name: Unxip xcode {{ item.major }}
+  become: true
   command: xip -x /Applications/Xcode_{{ item.major }}.{{ item.minor }}.xip
+  async: 360
+  poll: 30
   args:
     creates: /Applications/Xcode{{ item.major }}.app
+    chdir: /Applications/
 
 - name: Move xcode to correct directory
   become: true
@@ -43,7 +48,7 @@
     mode: 0644
 
 # BUILD-7003
-- name: OSX | Run xcode first launch
+- name: Run xcode first launch
   become: true
   command: /Applications/Xcode{{ item.major }}.app/Contents/Developer/usr/bin/xcodebuild -runFirstLaunch
   args:
