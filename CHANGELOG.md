@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.0.0...v1.1.0) (2019-11-01)
+
+
+### Bug Fixes
+
+* Fixed version variable ([2129726](https://github.com/mongodb-ansible-roles/ansible-role-xcode/commit/212972678c8f581d1df763175b0427e0431f8ffe))
+
+
+### Features
+
+* Added xcode 10.1 ([b05a7c4](https://github.com/mongodb-ansible-roles/ansible-role-xcode/commit/b05a7c4f90d3d60dd7e4c634874bd280882d22cb))
+
 # 1.0.0 (2019-10-21)
 
 
