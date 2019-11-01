@@ -3,34 +3,26 @@
 - name: Check if Xcode is already downloaded
   become: true
   stat:
-    path: "{{ xcode_download_location }}/xcode{{ item.major }}.xip"
+    path: "/Applications/Xcode_{{ item.major }}.{{ item.minor }}.xip"
   register: xcode_xip
 
 - name: Download Xcode
   become: true
   get_url:
     url: https://s3.amazonaws.com/boxes.10gen.com/build/xcode/Xcode_{{ item.major }}.{{ item.minor }}.xip
-    dest: "{{ xcode_download_location }}/xcode{{ item.major }}.xip"
+    dest: "/Applications/Xcode_{{ item.major }}.{{ item.minor }}.xip"
   when: not xcode_xip.stat.exists
 
-- name: Check if Xcode directory already exists
-  become: true
-  stat:
-    path: /Applications/Xcode.app
-  register: xcode_dir
-
-- name: Check if Xcode versioned directory already exists
-  become: true
-  stat:
-    path: /Applications/Xcode{{ item.major }}.app
-  register: xcode_ver_dir
+- name: Unxip xcode
+  command: xip -x /Applications/Xcode_{{ item.major }}.{{ item.minor }}.xip
+  args:
+    creates: /Applications/Xcode{{ item.major }}.app
 
 - name: Move xcode to correct directory
   become: true
   command: mv /Applications/Xcode.app /Applications/Xcode{{ item.major }}.{{ item.minor }}.app
-  when:
-    - xcode_dir.stat.exists
-    - not xcode_ver_dir.stat.exists
+  args:
+    creates: /Applications/Xcode{{ item.major }}.app
 
 - name: Link Xcode version
   become: true
