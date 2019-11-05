@@ -1,7 +1,9 @@
 Ansible role for xcode
 ==================================
 
-Installs xcode on Mac hosts
+Installs xcode on Mac hosts. This role may fail if the certificate attached to the xcode xip file is expired.
+You can take a look at this issue for more information: https://forums.developer.apple.com/thread/125108
+The fix would be to redownload a new xip from Apple's developer page, which should have an updated certificate
 
 [![CircleCI](https://img.shields.io/circleci/build/github/mongodb-ansible-roles/ansible-role-xcode/master?style=flat-square)](https://circleci.com/gh/mongodb-ansible-roles/ansible-role-xcode)
 

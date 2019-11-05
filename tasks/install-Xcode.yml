@@ -15,7 +15,6 @@
   poll: 60
   when: not xcode_xip.stat.exists
 
-# This takes up to 6 minutes
 - name: Unxip xcode {{ item.major }}
   become: true
   command: xip -x /Applications/Xcode_{{ item.major }}.{{ item.minor }}.xip
