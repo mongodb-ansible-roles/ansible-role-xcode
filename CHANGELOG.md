@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.1.2...v1.1.3) (2019-11-06)
+
+
+### Bug Fixes
+
+* Added async to xcode download ([3b3299c](https://github.com/mongodb-ansible-roles/ansible-role-xcode/commit/3b3299c8232f527bdf6695421691f16f768d3a15))
+
 ## [1.1.2](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.1.1...v1.1.2) (2019-11-01)
 
 
