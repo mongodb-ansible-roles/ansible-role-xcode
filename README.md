@@ -10,7 +10,7 @@ The fix would be to redownload a new xip from Apple's developer page, which shou
 Requirements
 ------------
 
-Command line tools must be installed. This is taken care of by the command-line-tools role
+Command line tools must be installed. This is taken care of by the command-line-tools role. Please make sure the command line tools are the correct version
 
 Role Variables
 --------------
