@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.1.3...v1.1.4) (2019-12-09)
+
+
+### Bug Fixes
+
+* Removed checksum check to speed up stat ([8761fc7](https://github.com/mongodb-ansible-roles/ansible-role-xcode/commit/8761fc7168d217a56cf2c9e34acf0e1bdc19fb64))
+
 ## [1.1.3](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.1.2...v1.1.3) (2019-11-06)
 
 
