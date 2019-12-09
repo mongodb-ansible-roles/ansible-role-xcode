@@ -4,6 +4,7 @@
   become: true
   stat:
     path: "/Applications/Xcode_{{ item.major }}.{{ item.minor }}.xip"
+    get_checksum: false
   register: xcode_xip
 
 - name: Download Xcode
