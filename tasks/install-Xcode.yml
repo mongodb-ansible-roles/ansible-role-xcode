@@ -24,6 +24,7 @@
   args:
     creates: /Applications/Xcode{{ item.major }}.app
     chdir: /Applications/
+  when: not xcode_xip.stat.exists
 
 - name: Move xcode to correct directory
   become: true
