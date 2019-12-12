@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.1.4...v1.1.5) (2019-12-12)
+
+
+### Bug Fixes
+
+* Skip unxip step to speed up role ([20a8b29](https://github.com/mongodb-ansible-roles/ansible-role-xcode/commit/20a8b29f5a501cd97e5e06d062a631591b62d2cd))
+
 ## [1.1.4](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.1.3...v1.1.4) (2019-12-09)
 
 
