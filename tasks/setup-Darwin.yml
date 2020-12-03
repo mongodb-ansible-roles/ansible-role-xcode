@@ -81,4 +81,13 @@
 - name: Set up /usr/include
   become: true
   command: installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
-  when: not usrinclude.stat.exists
+  when: not usrinclude.stat.exists | when: ansible_distribution_version < '10.15.0'
+
+- name: Set up /usr/include for 10.15
+  become: true
+  file:
+    src: "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include"
+    dest: "/usr/include"
+    state: link
+  when: when: ansible_distribution_version >= '10.15.0'  
+
