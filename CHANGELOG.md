@@ -1,3 +1,11 @@
+## [1.1.6](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.1.5...v1.1.6) (2020-12-04)
+
+
+### Bug Fixes
+
+* remove molecule workflow ([cfbed28](https://github.com/mongodb-ansible-roles/ansible-role-xcode/commit/cfbed288e48449460840705c5492d825d759c70c))
+* set /usr/include for mac10.15 ([38ba10c](https://github.com/mongodb-ansible-roles/ansible-role-xcode/commit/38ba10c8a268534c33402536e8bea4dfbc557c5c))
+
 ## [1.1.5](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.1.4...v1.1.5) (2019-12-12)
 
 
