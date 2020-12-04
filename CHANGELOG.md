@@ -1,3 +1,10 @@
+## [1.1.8](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.1.7...v1.1.8) (2020-12-04)
+
+
+### Bug Fixes
+
+* fix usr/include task ([ca1cd9e](https://github.com/mongodb-ansible-roles/ansible-role-xcode/commit/ca1cd9ee8eb0d9dcf998091a05aa3ce4fcbac60a))
+
 ## [1.1.7](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.1.6...v1.1.7) (2020-12-04)
 
 
