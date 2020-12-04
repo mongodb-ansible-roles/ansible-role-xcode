@@ -89,5 +89,5 @@
     src: "/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include"
     dest: "/usr/include"
     state: link
-  when: when: ansible_distribution_version >= '10.15.0'  
+  when: ansible_distribution_version >= '10.15.0'  
 
