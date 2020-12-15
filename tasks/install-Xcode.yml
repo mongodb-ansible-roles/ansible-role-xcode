@@ -2,10 +2,10 @@
 # Item refers to xcode_versions passed in from main.yml
 - name: Check if Xcode {{ item.major }} is already downloaded
   become: true
-  stat:
-    path: "/Applications/Xcode_{{ item.major }}.{{ item.minor }}.xip"
-    get_checksum: false
-  register: xcode_xip
+  command: /Applications/Xcode{{ item.major }}.{{ item.minor }}.app/Contents/Developer/usr/bin/xcodebuild -version
+  register: xcode_installed
+  changed_when: false
+  ignore_errors: true
 
 - name: Download Xcode
   become: true
@@ -14,7 +14,7 @@
     dest: "/Applications/Xcode_{{ item.major }}.{{ item.minor }}.xip"
   async: 600
   poll: 60
-  when: not xcode_xip.stat.exists
+  when: xcode_installed.rc != 0
 
 - name: Unxip xcode {{ item.major }}
   become: true
@@ -24,7 +24,7 @@
   args:
     creates: /Applications/Xcode{{ item.major }}.app
     chdir: /Applications/
-  when: not xcode_xip.stat.exists
+  when: xcode_installed.rc != 0
 
 - name: Move xcode to correct directory
   become: true
