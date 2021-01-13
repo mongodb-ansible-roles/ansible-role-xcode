@@ -1,0 +1,7 @@
+---
+- name: Converge macos-catalina
+  hosts: macos-catalina
+  tasks:
+    - name: "Include ansible-role-xcode"
+      include_role:
+        name: "ansible-role-xcode"

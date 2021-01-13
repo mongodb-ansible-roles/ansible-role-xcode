@@ -1,0 +1,11 @@
+---
+- become: true
+  name: Converge
+  hosts: all
+  roles:
+    - role: ansible-role-xcode
+      vars:
+        xcode_versions:
+          - major: 10.2
+            minor: 0
+            gm_license: EA1478

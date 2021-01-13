@@ -19,11 +19,6 @@ Role Variables
 |------|-------------|:----:|:-------:|:--------:|
 | xcode\_versions | List of xcode versions with minor versions to install | List of objects | See example | true |
 
-Dependencies
-------------
-
-None
-
 Example Playbook
 ----------------
 
@@ -37,19 +32,6 @@ Example Playbook
             minor: 0
             gm_licence: EA1478
 ```
-
-Development
------------
-
-Testing this role locally requires the CircleCI [Local CLI](https://circleci.com/docs/2.0/local-cli/).
-
-To install the CLI for macOS and Linux, invoke the following command:
-
-    $ curl -fLSs https://circle.ci/cli | DESTDIR=/usr/local/bin bash
-
-After installing the CLI, invoke the following command to run the Molecule tests:
-
-    $ make test
 
 License
 -------
