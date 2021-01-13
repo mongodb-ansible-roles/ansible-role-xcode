@@ -2,17 +2,19 @@
 dependency:
   name: galaxy
 driver:
-  name: docker
-lint:
-  name: yamllint
+  name: delegated
+lint: |
+  set -e
+  yamllint .
+  ansible-lint
+  flake8
 platforms:
-  - name: instance
-    image: debian:9
+  - name: macos-1014
 provisioner:
   name: ansible
-  lint:
-    name: ansible-lint
+  inventory:
+    host_vars:
+      macos-1014-dev:
+        ansible_python_interpreter: "/usr/bin/python"
 verifier:
-  name: inspec
-  lint:
-    name: rubocop
+  name: testinfra
