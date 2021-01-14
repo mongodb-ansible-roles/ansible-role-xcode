@@ -3,7 +3,7 @@
 - name: Check if Xcode {{ item.major }} is already downloaded
   become: true
   stat:
-    path: "/Applications/Xcode_{{ item.major }}.{{ item.minor }}.xip"
+    path: "/Applications/Xcode{{ item.major }}.{{ item.minor }}.app"
     get_checksum: false
   register: xcode_xip
 
