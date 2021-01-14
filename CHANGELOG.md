@@ -1,3 +1,10 @@
+## [1.1.11](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.1.10...v1.1.11) (2021-01-14)
+
+
+### Bug Fixes
+
+* Check for the final install folder ([f26a731](https://github.com/mongodb-ansible-roles/ansible-role-xcode/commit/f26a731b017e0a8b1d434f162db6af1f0da769bc))
+
 ## [1.1.10](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.1.9...v1.1.10) (2021-01-14)
 
 
