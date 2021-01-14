@@ -1,3 +1,10 @@
+## [1.1.10](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.1.9...v1.1.10) (2021-01-14)
+
+
+### Bug Fixes
+
+* Update Molecule to v3 ([932e524](https://github.com/mongodb-ansible-roles/ansible-role-xcode/commit/932e5241025130bcd9d299d1c5ee6146c4dd94c6))
+
 ## [1.1.9](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.1.8...v1.1.9) (2020-12-04)
 
 
