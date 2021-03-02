@@ -1,3 +1,10 @@
+## [1.1.12](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.1.11...v1.1.12) (2021-03-02)
+
+
+### Bug Fixes
+
+* bump unxip timeout, since xcode 12 is failing to unxip ([50b5089](https://github.com/mongodb-ansible-roles/ansible-role-xcode/commit/50b5089c1bc0cee2fdc1ef4800f7cf3606d735e8))
+
 ## [1.1.11](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.1.10...v1.1.11) (2021-01-14)
 
 
