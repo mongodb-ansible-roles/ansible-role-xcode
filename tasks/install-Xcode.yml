@@ -34,7 +34,7 @@
 
 - name: Move xcode to correct directory
   become: true
-  command: mv /Applications/Xcode*.app /Applications/Xcode{{ item.major }}.{{ item.minor }}.app
+  command: mv /Applications/xcode_source/Xcode*.app /Applications/Xcode{{ item.major }}.{{ item.minor }}.app
   args:
     creates: /Applications/Xcode{{ item.major }}.app
 
