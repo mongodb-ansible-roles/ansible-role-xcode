@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.1.12...v1.2.0) (2021-03-02)
+
+
+### Features
+
+* create tmp folder to handle xcpde 12 specifics ([a4dc67b](https://github.com/mongodb-ansible-roles/ansible-role-xcode/commit/a4dc67bae4e79641aeba81a287f0eb9f3183c12b))
+
 ## [1.1.12](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.1.11...v1.1.12) (2021-03-02)
 
 
