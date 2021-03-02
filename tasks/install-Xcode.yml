@@ -7,28 +7,34 @@
     get_checksum: false
   register: xcode_xip
 
+- name: Create folder for source files 
+  become: true
+  file:
+    path: "/Applications/xcode_source"
+    state: directory
+
 - name: Download Xcode
   become: true
   get_url:
     url: https://s3.amazonaws.com/boxes.10gen.com/build/xcode/Xcode_{{ item.major }}.{{ item.minor }}.xip
-    dest: "/Applications/Xcode_{{ item.major }}.{{ item.minor }}.xip"
+    dest: "/Applications/xcode_source/Xcode_{{ item.major }}.{{ item.minor }}.xip"
   async: 600
   poll: 60
   when: not xcode_xip.stat.exists
 
 - name: Unxip xcode {{ item.major }}
   become: true
-  command: xip -x /Applications/Xcode_{{ item.major }}.{{ item.minor }}.xip
+  command: xip -x /Applications/xcode_source/Xcode_{{ item.major }}.{{ item.minor }}.xip
   async: 720
   poll: 30
   args:
     creates: /Applications/Xcode{{ item.major }}.app
-    chdir: /Applications/
+    chdir: /Applications/xcode_source/
   when: not xcode_xip.stat.exists
 
 - name: Move xcode to correct directory
   become: true
-  command: mv /Applications/Xcode.app /Applications/Xcode{{ item.major }}.{{ item.minor }}.app
+  command: mv /Applications/Xcode*.app /Applications/Xcode{{ item.major }}.{{ item.minor }}.app
   args:
     creates: /Applications/Xcode{{ item.major }}.app
 
