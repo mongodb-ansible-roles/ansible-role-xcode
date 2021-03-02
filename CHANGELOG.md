@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.2.0...v1.2.1) (2021-03-02)
+
+
+### Bug Fixes
+
+* correct source folder ([ea60bb0](https://github.com/mongodb-ansible-roles/ansible-role-xcode/commit/ea60bb087b9d433c00c458248749f4c899c1a8a1))
+
 # [1.2.0](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.1.12...v1.2.0) (2021-03-02)
 
 
