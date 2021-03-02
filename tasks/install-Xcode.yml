@@ -19,7 +19,7 @@
 - name: Unxip xcode {{ item.major }}
   become: true
   command: xip -x /Applications/Xcode_{{ item.major }}.{{ item.minor }}.xip
-  async: 360
+  async: 720
   poll: 30
   args:
     creates: /Applications/Xcode{{ item.major }}.app
