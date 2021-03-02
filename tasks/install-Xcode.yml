@@ -32,9 +32,14 @@
     chdir: /Applications/xcode_source/
   when: not xcode_xip.stat.exists
 
+- name: read archive name
+  shell: ls -d /Applications/xcode_source/Xcode*app
+  register: arch_name
+
 - name: Move xcode to correct directory
   become: true
-  command: mv /Applications/xcode_source/Xcode*.app /Applications/Xcode{{ item.major }}.{{ item.minor }}.app
+  command: mv /Applications/xcode_source/{{ item }} /Applications/Xcode{{ item.major }}.{{ item.minor }}.app
+  with_items: arch_name.stdout_lines
   args:
     creates: /Applications/Xcode{{ item.major }}.app
 
