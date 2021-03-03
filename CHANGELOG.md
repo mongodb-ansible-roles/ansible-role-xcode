@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.2.4...v1.2.5) (2021-03-03)
+
+
+### Bug Fixes
+
+* make read step idempotent ([4c1a717](https://github.com/mongodb-ansible-roles/ansible-role-xcode/commit/4c1a7175a2ade90745fa5a829e06d37ece3ee8a7))
+
 ## [1.2.4](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.2.3...v1.2.4) (2021-03-03)
 
 
