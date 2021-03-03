@@ -44,6 +44,7 @@
   command: mv {{ arch_name.stdout }} /Applications/Xcode{{ item.major }}.{{ item.minor }}.app
   args:
     creates: /Applications/Xcode{{ item.major }}.app
+  when: not xcode_xip.stat.exists
 
 - name: Link Xcode version
   become: true
