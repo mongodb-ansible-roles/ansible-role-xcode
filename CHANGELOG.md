@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.2.3...v1.2.4) (2021-03-03)
+
+
+### Bug Fixes
+
+* path ([826389c](https://github.com/mongodb-ansible-roles/ansible-role-xcode/commit/826389c2a10d5b40c54f65eab2c8e3de656b6b36))
+
 ## [1.2.3](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.2.2...v1.2.3) (2021-03-03)
 
 
