@@ -35,6 +35,9 @@
 - name: read archive name
   shell: ls -d /Applications/xcode_source/Xcode*app
   register: arch_name
+  args:
+    creates: /Applications/Xcode{{ item.major }}.app
+  when: not xcode_xip.stat.exists
 
 - name: Move xcode to correct directory
   become: true
