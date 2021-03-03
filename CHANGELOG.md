@@ -1,3 +1,10 @@
+## [1.2.6](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.2.5...v1.2.6) (2021-03-03)
+
+
+### Bug Fixes
+
+* exclude task when app is installed ([d2c3451](https://github.com/mongodb-ansible-roles/ansible-role-xcode/commit/d2c34512ab4ee3f5ec2865b798ff5ef7572c4bd9))
+
 ## [1.2.5](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.2.4...v1.2.5) (2021-03-03)
 
 
