@@ -38,8 +38,7 @@
 
 - name: Move xcode to correct directory
   become: true
-  command: mv /Applications/xcode_source/{{ item }} /Applications/Xcode{{ item.major }}.{{ item.minor }}.app
-  with_items: arch_name.stdout_lines
+  command: mv /Applications/xcode_source/{{ arch_name.stdout }} /Applications/Xcode{{ item.major }}.{{ item.minor }}.app
   args:
     creates: /Applications/Xcode{{ item.major }}.app
 
