@@ -18,7 +18,7 @@
   get_url:
     url: https://s3.amazonaws.com/boxes.10gen.com/build/xcode/Xcode_{{ item.major }}.{{ item.minor }}.xip
     dest: "/Applications/xcode_source/Xcode_{{ item.major }}.{{ item.minor }}.xip"
-  async: 600
+  async: 1200
   poll: 60
   when: not xcode_xip.stat.exists
 
