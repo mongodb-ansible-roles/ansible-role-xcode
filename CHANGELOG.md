@@ -1,3 +1,10 @@
+## [1.2.7](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.2.6...v1.2.7) (2021-03-04)
+
+
+### Bug Fixes
+
+* increase timeout for xcode download task ([a65665e](https://github.com/mongodb-ansible-roles/ansible-role-xcode/commit/a65665e3b744d163195fbb36aea803214a57ca56))
+
 ## [1.2.6](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.2.5...v1.2.6) (2021-03-03)
 
 
