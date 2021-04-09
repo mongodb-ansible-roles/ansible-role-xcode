@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.3.0...v1.3.1) (2021-04-09)
+
+
+### Bug Fixes
+
+* Run /usr/include task only for 10.15 ([a259587](https://github.com/mongodb-ansible-roles/ansible-role-xcode/commit/a259587c732cba074975181bbdee0bb8a24e5f1f))
+
 # [1.3.0](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.2.7...v1.3.0) (2021-04-09)
 
 
