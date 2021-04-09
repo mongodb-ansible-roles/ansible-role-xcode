@@ -6,3 +6,5 @@ xcode_versions:
   - major: 10.1
     minor: 0
     gm_license: EA1478
+xcode_async_download_time: 3600
+xcode_async_unxip_time: 3600

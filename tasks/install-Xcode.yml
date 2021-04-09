@@ -18,14 +18,14 @@
   get_url:
     url: https://s3.amazonaws.com/boxes.10gen.com/build/xcode/Xcode_{{ item.major }}.{{ item.minor }}.xip
     dest: "/Applications/xcode_source/Xcode_{{ item.major }}.{{ item.minor }}.xip"
-  async: 1200
+  async: "{{ xcode_async_download_time }}"
   poll: 60
   when: not xcode_xip.stat.exists
 
 - name: Unxip xcode {{ item.major }}
   become: true
   command: xip -x /Applications/xcode_source/Xcode_{{ item.major }}.{{ item.minor }}.xip
-  async: 720
+  async: "{{ xcode_async_unxip_time }}"
   poll: 30
   args:
     creates: /Applications/Xcode{{ item.major }}.app
