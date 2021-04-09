@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.2.7...v1.3.0) (2021-04-09)
+
+
+### Features
+
+* Move async timers to variables ([8a12b93](https://github.com/mongodb-ansible-roles/ansible-role-xcode/commit/8a12b93cdc8788341f82c1470f64d3005d440037))
+
 ## [1.2.7](https://github.com/mongodb-ansible-roles/ansible-role-xcode/compare/v1.2.6...v1.2.7) (2021-03-04)
 
 
